@@ -1,1 +1,1 @@
-[x] Install Dependencies
+[x] Install Required Dependencies
