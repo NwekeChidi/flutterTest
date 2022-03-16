@@ -1,0 +1,12 @@
+{
+  "name": "fluttertest",
+  "version": "1.0.0",
+  "description": "Lannister Pay: Assesment Test For FlutterWave Backend Developer Role",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
