@@ -1,22 +1,14 @@
-const mongoose = require('mongoose');
-const http = require('http');
 require('dotenv').config();
-
-const app = require('./app');
+const http = require('http');
+const app  = require('./app');
+const db   = require('./db/connectDB');
 
 //Connecting to the database
 let DB = process.env.DB_LOCAL;
 if (process.env.NODE_ENV === 'production') {
   DB = process.env.DB_CLOUD;
 }
-
-mongoose
-  .connect(DB, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log('DB Connection Successful'))
-  .catch((err) => console.log(err));
+db.connect(DB);
 
 // Instantiate the HTTP server
 const server = http.createServer(app);

@@ -1,4 +1,5 @@
 [x] Install Required Dependencies
+[x] Initialize server.js
 [ ] Host API On Heroku (Continous Development)
 [ ] Configure Redis and MongoDB
 [ ] Write ```/Fees``` Endpoint
