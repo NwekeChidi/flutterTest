@@ -1,7 +1,7 @@
 - [x] Install Required Dependencies
 - [x] Initialize server.js
 - [x] Host API On Heroku (Continous Integration)
-- [ ] Configure Redis and MongoDB
+- [x] Configure Redis and MongoDB
 - [ ] Write ```/Fees``` Endpoint
 - [ ] Write ```/compute-transaction-fees``` Endpoint
 - [ ] Refactoring
