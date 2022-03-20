@@ -1,6 +1,7 @@
 require('dotenv').config();
+require('./db/redis');
 const http  = require('http');
-const app   = require('./app');
+const app  = require('./app');
 const db    = require('./db/connectDB');
 
 // Connecting to the database

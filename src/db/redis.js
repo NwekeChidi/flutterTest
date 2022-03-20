@@ -1,20 +1,23 @@
-const redis = require('redis');
-const util  = require('util');
-require('dotenv').config();
+// require('dotenv').config();
+// const util  = require('util');
+// const redis = require('redis');
 
-// get the port || uri
-let REDIS_URL = process.env.REDIS_LOCAL;
-if (process.env.NODE_ENV === "production") {
-    REDIS_URL = process.env.REDIS_URL
-}
+// // Creating Redis client
+// let REDIS_URL = process.env.REDIS_LOCAL;
+// if (process.env.NODE_ENV === "production") {
+//     REDIS_URL = process.env.REDIS_URL
+// }
 
-// connect
-const client = redis.createClient(REDIS_URL);
+// const client = redis.createClient();
+// client.on('connect', () => {
+//     console.log("Client is connected")
+// })
 
-// promisify redis get and set
-client.get = util.promisify(client.get);
-client.set = util.promisify(client.set);
+// client.get = util.promisify(client.get);
+// client.setEx = util.promisify(client.setEx);
 
-// set data to cache
+const { createClient } = require('redis')
+const redisClient = createClient()
+redisClient.connect().catch(console.error)
 
-module.exports = client;
+module.exports = redisClient

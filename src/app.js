@@ -13,15 +13,29 @@ app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev'));
 
 
-//ROUTES
+const session = require('express-session');
+let RedisStore = require('connect-redis')(session)
 
+
+
+app.use(
+  session({
+    store: new RedisStore({client : require('./db/redis')}),
+    saveUninitialized: false,
+    secret: "keyboard cat",
+    resave: false
+  })
+)
+
+//ROUTES
+app.use('', require('./routes/payRoute') );
 app.get('/', (req, res) =>{
   res.status(200).send("Api Working!")
 });
-
 app.all('**', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
+
 
 app.use(appErrorHandler);
 
