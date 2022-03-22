@@ -3,7 +3,7 @@
 - [x] Host API On Heroku (Continous Integration)
 - [x] Configure Redis and MongoDB
 - [x] Write ```/Fees``` Endpoint
-- [ ] Write ```/compute-transaction-fees``` Endpoint
+- [x] Write ```/compute-transaction-fees``` Endpoint
 - [ ] Refactoring
 - [ ] Testing
 - [ ] Add Documentation
