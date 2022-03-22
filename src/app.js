@@ -28,7 +28,7 @@ app.use(
 //ROUTES
 app.use('', require('./routes/payRoute') );
 app.get('/', (req, res) =>{
-  res.status(200).send("Api Working!")
+  res.status(200).send("LANNISTER PAY API!")
 });
 app.all('**', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
