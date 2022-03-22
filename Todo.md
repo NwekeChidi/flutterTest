@@ -4,6 +4,6 @@
 - [x] Configure Redis and MongoDB
 - [x] Write ```/Fees``` Endpoint
 - [x] Write ```/compute-transaction-fees``` Endpoint
-- [ ] Refactoring
+- [x] Refactoring
 - [ ] Testing
 - [ ] Add Documentation

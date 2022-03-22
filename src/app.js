@@ -16,8 +16,6 @@ app.use(morgan('dev'));
 const session = require('express-session');
 let RedisStore = require('connect-redis')(session)
 
-
-
 app.use(
   session({
     store: new RedisStore({client : require('./db/redis')}),
