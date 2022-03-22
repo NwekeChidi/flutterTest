@@ -6,4 +6,4 @@
 - [x] Write ```/compute-transaction-fees``` Endpoint
 - [x] Refactoring
 - [ ] Testing
-- [ ] Add Documentation
+- [x] Add Documentation
