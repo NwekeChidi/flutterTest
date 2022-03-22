@@ -7,7 +7,8 @@ if ( process.env.NODE_ENV === "production"){
 }
 
 console.log(REDIS_URI);
+console.log(process.env.NODE_ENV)
 const redisClient = createClient(REDIS_URI)
 redisClient.connect().catch(console.error)
 
-module.exports = redisClient
+module.exports = redisClient;
