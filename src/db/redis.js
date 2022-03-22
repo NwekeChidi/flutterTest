@@ -6,6 +6,7 @@ if ( process.env.NODE_ENV === "production"){
     REDIS_URI = process.env.REDIS_URI
 }
 
+console.log(REDIS_URI);
 const redisClient = createClient(REDIS_URI)
 redisClient.connect().catch(console.error)
 
