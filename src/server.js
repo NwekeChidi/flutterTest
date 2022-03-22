@@ -1,15 +1,7 @@
 require('dotenv').config();
 require('./db/redis');
 const http  = require('http');
-const app  = require('./app');
-const db    = require('./db/connectDB');
-
-// Connecting to the database
-let DB = process.env.DB_LOCAL;
-if (process.env.NODE_ENV === 'production') {
-  DB = process.env.DB_CLOUD;
-}
-db.connect(DB);
+const app   = require('./app');
 
 
 // Instantiate the HTTP server
